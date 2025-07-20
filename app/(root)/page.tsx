@@ -1,10 +1,12 @@
+import { auth } from '@/auth'
 import React from 'react'
 
-const Home = () => {
+const Home = async () => {
+  const session = await auth()
+  console.log('Session:', session)
   return (
     <>
-    <div className='text-red-500 text-4xl font-inter'>DevFlow</div>
-    <div className='text-red-500 text-4xl font-space-grotesk'>DevFlow</div>
+    <h1>hello</h1>
     </>
   )
 }
